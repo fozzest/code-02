@@ -81,12 +81,12 @@ void keyPressed() {
       p2MoveLeft = true;
     }
 
+    if (key == 'k') {
+      p2Fire = true;
+    }
 
     if (keyCode == RIGHT) {
       p2MoveRight = true;
-    }
-    if (key == 'k') {
-      p2Fire = true;
     }
   } else {
     if (key == 'w') {
@@ -112,6 +112,9 @@ void keyReleased() {
     if (keyCode == UP) {
       p2MoveUp = false;
     }
+    if (key == 'k') {
+      p2Fire = false;
+    }
     if (keyCode == DOWN) {
       p2MoveDown = false;
     }
@@ -121,9 +124,6 @@ void keyReleased() {
     }
     if (keyCode == RIGHT) {
       p2MoveLeft = false;
-    }
-    if (key == 'k') {
-      p2Fire = false;
     }
   } else {
     if (key == 'w') {

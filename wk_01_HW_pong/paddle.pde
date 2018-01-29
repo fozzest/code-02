@@ -26,6 +26,8 @@ class Paddle {
     //a corner mode makes shaping the paddle and collisions more simple
     fill(255);
     rect(x, y, pw, ph);
+    
+  
 
     if (playerNum == 0) {
 
@@ -79,9 +81,9 @@ class Paddle {
     }
     
     if (p2Fire) {
-        stroke(255,0,0);
+        stroke(255);
         strokeWeight(3);
-        line(p2.x+10, p2.y+50, 0, p2.y+50);
+        line(p1.x+10, p1.y+50, width, p1.y+50);
         //if (p2.y + 50 > p1.y && p2.y +50 < p1.y +100){
         //  p1.ph = p1.ph/1.1;
         //}
