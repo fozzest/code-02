@@ -1,10 +1,10 @@
 
-
 class Ball {
-  float x;   
-  float y;   
+   
   float dx;  
-  float dy;  
+  float dy; 
+  float x;   
+  float y;  
 
   Ball() {
     x = width/2;
@@ -16,7 +16,7 @@ class Ball {
 
   void update() {
     noStroke();
-    fill((random(255,200)),255,255);
+    fill((random(255,100)),200,200);
     rectMode(CENTER);
     rect(x, y, 30, 30);
     x += dx;
