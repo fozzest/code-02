@@ -27,8 +27,6 @@ class Paddle {
     fill(255);
     rect(x, y, pw, ph);
     
-  
-
     if (playerNum == 0) {
 
       if (p1MoveUp) {
@@ -81,12 +79,15 @@ class Paddle {
     }
     
     if (p2Fire) {
-        stroke(255);
+        stroke(0,0255);
         strokeWeight(3);
-        line(p1.x+10, p1.y+50, width, p1.y+50);
-        //if (p2.y + 50 > p1.y && p2.y +50 < p1.y +100){
-        //  p1.ph = p1.ph/1.1;
-        //}
+        line(p2.x+10, p2.y+50, 0, p2.y+50);
+        if (p2.y + 50 > p1.y && p2.y +50 < p1.y +p1.ph){
+          p1.ph = p1.ph/1.1;
+        }
+        if (p2.y + 50 > 50 && p2.y +50 < 200 ){
+          p1Score= p1Score -1;
+        }
       
       }
   }
