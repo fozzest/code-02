@@ -8,6 +8,8 @@
 //along with material shown in our first lesson, and exampes of collisions, I created the initial, owrking piong game
 //further iterations with the paddle class cleaned up how my final code looked, limiting the parameters that had to be put in manually
 
+//paddles can move along x and y axis
+
 //still to come: adjusgments to make it my own type of Pong, ie extra baalls, colourful background
 
 
@@ -29,7 +31,7 @@ void setup() {
 }
 
 void draw() {
-  background(0);
+  background(100);
 
   b.paddleCollide(p1);
   b.paddleCollide(p2);
@@ -56,8 +58,15 @@ void draw() {
 
 boolean p1MoveUp = false;
 boolean p1MoveDown = false;
+boolean p1MoveLeft = false;
+boolean p1MoveRight = false;
 boolean p2MoveUp = false;
 boolean p2MoveDown = false;
+boolean p2MoveLeft = false;
+boolean p2MoveRight = false;
+
+boolean p1Fire = false;
+boolean p2Fire = false;
 
 void keyPressed() {
   if (key == CODED) {
@@ -67,12 +76,33 @@ void keyPressed() {
     if (keyCode == DOWN) {
       p2MoveDown = true;
     }
+
+    if (keyCode == LEFT) {
+      p2MoveLeft = true;
+    }
+
+
+    if (keyCode == RIGHT) {
+      p2MoveRight = true;
+    }
+    if (key == 'l') {
+      p2Fire = true;
+    }
   } else {
     if (key == 'w') {
       p1MoveUp = true;
     }
     if (key == 's') {
       p1MoveDown = true;
+    }
+    if (key == 'a') {
+      p1MoveLeft = true;
+    }
+    if (key == 'd') {
+      p1MoveRight = true;
+    }
+    if (key == 'f') {
+      p1Fire = true;
     }
   }
 }
@@ -85,12 +115,31 @@ void keyReleased() {
     if (keyCode == DOWN) {
       p2MoveDown = false;
     }
+
+    if (keyCode == LEFT) {
+      p2MoveLeft = false;
+    }
+    if (keyCode == RIGHT) {
+      p2MoveLeft = false;
+    }
+    if (key == 'l') {
+      p2Fire = false;
+    }
   } else {
     if (key == 'w') {
       p1MoveUp = false;
     }
     if (key == 's') {
       p1MoveDown = false;
+    }
+    if (key == 'a') {
+      p1MoveLeft = false;
+    }
+    if (key == 'd') {
+      p1MoveRight = false;
+    }
+    if (key == 'f') {
+      p1Fire = false;
     }
   }
 }

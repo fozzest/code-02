@@ -60,7 +60,9 @@ class Ball {
 //this was more of an issue with the height (y-axis), as the natire of the game uses a vertical paddle, with material that stretches far beyond the paddle's vertical centrepoint.
 
   void paddleCollide(Paddle p) {
+    //if (x > p.x && x < p.x) {
     if (x > p.x && x < p.x + p.pw) {
+      //now establish the height of the paddle as the otehr collision point
       if (y > p.y && y < p.y + p.ph) {
         dx = -dx;
       }
