@@ -48,6 +48,9 @@ class Paddle {
         if (p1.y + 50 > p2.y && p1.y +50 < p2.y +p2.ph){
           p2.ph = p2.ph/1.1;
         }
+        if (p1.y + 50 > 50 && p1.y +50 < 200 ){
+          p2Score= p2Score -1;
+        }
       
       }
       
@@ -78,7 +81,7 @@ class Paddle {
     if (p2Fire) {
         stroke(255,0,0);
         strokeWeight(3);
-        line(p2.x-10, p2.y+50, 0, p2.y+50);
+        line(p2.x+10, p2.y+50, 0, p2.y+50);
         //if (p2.y + 50 > p1.y && p2.y +50 < p1.y +100){
         //  p1.ph = p1.ph/1.1;
         //}
@@ -87,15 +90,3 @@ class Paddle {
   }
 }
 }
-
-
-
-
-//void cannon(int shotX)
-//{
-//  boolean strike = false;
-//  for (int i = 0; i < 5; i++)
-//  {
-//    if ((shotX >= (ballx[i]-ballSize/2)) && (shotX <= (ballx[i]+ballSize/2))) {
-
-//      line(p1.x, p1.y+50, mouseX, p1.x);

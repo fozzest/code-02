@@ -9,8 +9,8 @@
 //further iterations with the paddle class cleaned up how my final code looked, limiting the parameters that had to be put in manually
 
 //paddles can move along x and y axis
-
-//still to come: adjusgments to make it my own type of Pong, ie extra baalls, colourful background
+//player1 can fire laser, halving the size of the opponent's paddle
+//player1 can fire laser, diminishing score of opponent
 
 
 
@@ -85,7 +85,7 @@ void keyPressed() {
     if (keyCode == RIGHT) {
       p2MoveRight = true;
     }
-    if (key == 'l') {
+    if (key == 'k') {
       p2Fire = true;
     }
   } else {
@@ -122,7 +122,7 @@ void keyReleased() {
     if (keyCode == RIGHT) {
       p2MoveLeft = false;
     }
-    if (key == 'l') {
+    if (key == 'k') {
       p2Fire = false;
     }
   } else {
