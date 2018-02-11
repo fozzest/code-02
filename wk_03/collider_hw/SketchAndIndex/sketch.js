@@ -242,6 +242,8 @@ function Collider() {
     other.vel.x*=-1;
     this.width = this.width-5;
     this.height = this.height-5;
+    other.vel.x = cos(other.angle) * other.speed;
+    other.vel.y = sin(other.angle) * other.speed;
   }
 }
 
