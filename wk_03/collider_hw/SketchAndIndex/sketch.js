@@ -35,8 +35,7 @@ function windowResized() {
 }
 
 function setup() {
-  paddleBounceSFX = loadSound('assets/ballCollide.mp3', function() { console.log("loaded"); });
-  hitColliderSFX = loadSound('assets/hitCollider.mp3', function() { console.log("loaded"); });
+
   cnv = createCanvas(900, 500);
   centerCanvas();
   ball = new Ball();
