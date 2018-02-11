@@ -9,8 +9,7 @@
 //PLAYER 2 : ARROWS, K 
 
 
-
-var ball ;
+var ball;
 var p1;
 var p2;
 var p1Score = 0;
@@ -61,7 +60,7 @@ function draw() {
 
 class Ball{
 	constructor() {
-	this.x = width/2;
+	  this.x = width/2;
     this.y = height/2;
     this.dx = 10;  
     this.dy =  random(5,-5);
@@ -159,7 +158,6 @@ rectMode(CORNER);
         if (p1.y + 50 > 50 && p1.y +50 < 200 ){
           p2Score= p2Score -1;
         }
-      
       }
 	}
 }
@@ -203,10 +201,8 @@ rectMode(CORNER);
         }
         if (p2.y + 50 > 50 && p2.y +50 < 200 ){
           p1Score= p1Score -1;
-        }
-      
+        }   
       }
-  
 	}	
 }
 
@@ -221,15 +217,12 @@ function keyPressed() {
     if (keyCode == DOWN_ARROW) {
       p2MoveDown = true;
     }
-
     if (keyCode == LEFT_ARROW) {
       p2MoveLeft = true;
     }
-
     if (keyCode == RIGHT_ARROW) {
       p2MoveRight = true;
     }
-   
     if (key === 'W') {
       p1MoveUp = true;
       print('so does this');
